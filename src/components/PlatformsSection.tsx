@@ -13,7 +13,7 @@ const PlatformsSection = () => {
   const platforms = portfolioData.platforms;
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -33,10 +33,10 @@ const PlatformsSection = () => {
                 href={platform.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center group"
+                className="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-center group"
               >
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
-                  <IconComponent className="h-8 w-8 text-blue-600" />
+                <div className="bg-gradient-to-r from-amber-100 to-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:from-amber-200 group-hover:to-orange-200 transition-colors">
+                  <IconComponent className="h-8 w-8 text-amber-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {platform.name}
