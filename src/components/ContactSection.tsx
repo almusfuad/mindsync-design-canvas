@@ -4,7 +4,8 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
 
 const ContactSection = () => {
-  const contact = portfolioData.contact;
+  const company = portfolioData.company;
+  const socialMedia = portfolioData.socialMedia;
 
   return (
     <section id="contact" className="py-16 bg-gradient-to-br from-amber-50 to-orange-50">
@@ -28,15 +29,15 @@ const ContactSection = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-amber-600 mr-4" />
-                  <span className="text-gray-700">{contact.email}</span>
+                  <span className="text-gray-700">{company.email}</span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-amber-600 mr-4" />
-                  <span className="text-gray-700">{contact.phone}</span>
+                  <span className="text-gray-700">{company.phone}</span>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 text-amber-600 mr-4" />
-                  <span className="text-gray-700">{contact.address}</span>
+                  <span className="text-gray-700">{company.address}</span>
                 </div>
               </div>
             </div>
@@ -47,7 +48,7 @@ const ContactSection = () => {
                 Follow Us
               </h4>
               <div className="flex space-x-4">
-                {contact.socialMedia.map((social, index) => (
+                {socialMedia.map((social, index) => (
                   <a
                     key={index}
                     href={social.url}
@@ -56,7 +57,7 @@ const ContactSection = () => {
                     className="w-10 h-10 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full flex items-center justify-center hover:from-amber-600 hover:to-orange-600 transition-all duration-300"
                   >
                     <span className="text-sm font-semibold">
-                      {social.platform.charAt(0)}
+                      {social.name.charAt(0)}
                     </span>
                   </a>
                 ))}
